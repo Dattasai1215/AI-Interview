@@ -34,7 +34,7 @@ const feedbackText = document.getElementById("feedbackText");
 const improvementText = document.getElementById("improvementText");
 const newInterviewBtn = document.getElementById("newInterviewBtn");
 
-const API = "";
+const API = "https://ai-interview-az6s.onrender.com";
 
 // Subject Icons Map
 const iconMap = {
