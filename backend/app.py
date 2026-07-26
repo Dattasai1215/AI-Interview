@@ -126,7 +126,7 @@ def speech_to_text(audio_path):
   """Convert audio file to text using AssemblyAI"""
   transcriber = aai.Transcriber()
   config = aai.TranscriptionConfig(
-    speech_model="universal-s-3-5-pro",
+    speech_model="universal",
     language_detection=True,
     speaker_labels=True,
    )
