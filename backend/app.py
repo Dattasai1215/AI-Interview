@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.agents import create_agent
-from langchain_xai import ChatXAI
+from langchain_groq import ChatGroq
 
 import assemblyai as aai
 import os
@@ -15,7 +15,7 @@ import json
 
 load_dotenv()
 
-XAI_API_KEY = os.getenv("XAI_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MURF_API_KEY = os.getenv("MURF_API_KEY")
 ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 aai.settings.api_key = ASSEMBLYAI_API_KEY
@@ -23,9 +23,9 @@ checkpointer = InMemorySaver()
 
 
 
-model = ChatXAI(
-    model="grok-4",
-    api_key=XAI_API_KEY,
+model = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    groq_api_key=GROQ_API_KEY,
     temperature=0.7
 )
 
