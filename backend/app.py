@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.agents import create_agent
+from langchain_xai import ChatXAI
 import assemblyai as aai
 import os
 import base64
@@ -13,15 +14,16 @@ import json
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+XAI_API_KEY = os.getenv("XAI_API_KEY")
 MURF_API_KEY = os.getenv("MURF_API_KEY")
 ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 checkpointer = InMemorySaver()
 
-model = init_chat_model(
-    "google_genai:gemini-1.5-pro",
-    api_key=GOOGLE_API_KEY
+model = ChatXAI(
+    model="grok-4",
+    api_key=XAI_API_KEY,
+    temperature=0.7
 )
 
 agent = create_agent(
