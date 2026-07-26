@@ -61,7 +61,7 @@ gunicorn
 langchain
 langgraph
 langchain-core
-langchain-xai
+langchain-groq
 Werkzeug==3.1.8
 xxhash==3.7.1
 zstandard==0.25.0
