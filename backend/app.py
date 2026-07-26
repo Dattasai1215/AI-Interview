@@ -20,7 +20,7 @@ aai.settings.api_key = ASSEMBLYAI_API_KEY
 checkpointer = InMemorySaver()
 
 model = init_chat_model(
-    "google_genai:gemini-2.5-flash-lite",
+    "google_genai:gemini-1.5-pro",
     api_key=GOOGLE_API_KEY
 )
 
