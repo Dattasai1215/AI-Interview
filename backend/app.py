@@ -21,7 +21,7 @@ aai.settings.api_key = ASSEMBLYAI_API_KEY
 checkpointer = InMemorySaver()
 
 model = ChatXAI(
-    model="grok-4",
+    model="llama-3.3-70b-versatile",
     api_key=XAI_API_KEY,
     temperature=0.7
 )
