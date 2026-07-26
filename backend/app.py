@@ -5,6 +5,7 @@ from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.agents import create_agent
 from langchain_xai import ChatXAI
+
 import assemblyai as aai
 import os
 import base64
@@ -20,8 +21,10 @@ ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 checkpointer = InMemorySaver()
 
+
+
 model = ChatXAI(
-    model="llama-3.3-70b-versatile",
+    model="grok-4",
     api_key=XAI_API_KEY,
     temperature=0.7
 )
