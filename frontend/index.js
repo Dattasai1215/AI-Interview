@@ -34,7 +34,7 @@ const feedbackText = document.getElementById("feedbackText");
 const improvementText = document.getElementById("improvementText");
 const newInterviewBtn = document.getElementById("newInterviewBtn");
 
-const API = "https://ai-interview-assistant-felb.onrender.com";
+const API = "";
 
 // Subject Icons Map
 const iconMap = {
